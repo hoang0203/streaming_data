@@ -1,0 +1,5 @@
+pyspark==3.5.0
+python-dotenv
+kafka-python
+uuid6
+confluent-kafka
