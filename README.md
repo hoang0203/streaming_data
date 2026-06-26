@@ -34,19 +34,23 @@ Create a file named .env in the root directory of your project and populate it w
 
 
 --- PostgreSQL Configuration ---
+
 POSTGRES_DB_NAME=your_database_name <-- Điền tên database nguồn
 POSTGRES_USERNAME=your_user_name     <-- Điền tài khoản kết nối DB
 POSTGRES_PASSWORD=your_password     <-- Điền mật khẩu kết nối DB
 
 --- Kafka & Debezium Configuration (Optional for easier management) ---
+
 KAFKA_BOOTSTRAP_SERVER=localhost:9092
 DEBEZIUM_API_URL=http://localhost:8083/connectors
 
 --- MinIO Configuration ---
+
 MINIO_ROOT_USER=your_minio_user         <-- Tài khoản quản trị MinIO
 MINIO_ROOT_PASSWORD=your_minio_password <-- Mật khẩu quản trị MinIO
 
 --- ClickHouse Configuration ---
+
 CLICKHOUSE_USER=your_clickhouse_user         <-- Tài khoản truy cập ClickHouse
 CLICKHOUSE_PASSWORD=your_clickhouse_password <-- Mật khẩu truy cập ClickHouse
 CLICKHOUSE_DB=your_analytics_db_name         <-- Tên database dùng phân tích
@@ -91,4 +95,5 @@ Once all containers are successfully running (Up), you can monitor the data pipe
 |Prometheus Check	|Inspect connection endpoints health status	|http://localhost:9090/targets|
 
 **⚠️ Critical Notice**
+
 Before running docker-compose up, kindly verify and ensure that the required ports (4040, 8080, 9000, 9001, 3000, 9090, 5432, 8123) are completely available (free) and not occupied or blocked by any other background processes or local services running on your machine.
