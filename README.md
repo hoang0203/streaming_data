@@ -35,25 +35,31 @@ Create a file named .env in the root directory of your project and populate it w
 
 --- PostgreSQL Configuration ---
 
-POSTGRES_DB_NAME=your_database_name <-- Điền tên database nguồn
-POSTGRES_USERNAME=your_user_name     <-- Điền tài khoản kết nối DB
-POSTGRES_PASSWORD=your_password     <-- Điền mật khẩu kết nối DB
+POSTGRES_DB_NAME=your_database_name <-- Database name
+
+POSTGRES_USERNAME=your_user_name     <-- Database user
+
+POSTGRES_PASSWORD=your_password     <-- Database password
 
 --- Kafka & Debezium Configuration (Optional for easier management) ---
 
 KAFKA_BOOTSTRAP_SERVER=localhost:9092
+
 DEBEZIUM_API_URL=http://localhost:8083/connectors
 
 --- MinIO Configuration ---
 
-MINIO_ROOT_USER=your_minio_user         <-- Tài khoản quản trị MinIO
-MINIO_ROOT_PASSWORD=your_minio_password <-- Mật khẩu quản trị MinIO
+MINIO_ROOT_USER=your_minio_user         <-- MinIO root username
+
+MINIO_ROOT_PASSWORD=your_minio_password <-- MinIO root password
 
 --- ClickHouse Configuration ---
 
-CLICKHOUSE_USER=your_clickhouse_user         <-- Tài khoản truy cập ClickHouse
-CLICKHOUSE_PASSWORD=your_clickhouse_password <-- Mật khẩu truy cập ClickHouse
-CLICKHOUSE_DB=your_analytics_db_name         <-- Tên database dùng phân tích
+CLICKHOUSE_USER=your_clickhouse_user         <-- ClickHouse username
+
+CLICKHOUSE_PASSWORD=your_clickhouse_password <-- ClickHouse password
+
+CLICKHOUSE_DB=your_analytics_db_name         <-- ClickHouse database name
 
 ## 🚀 Setup & Deployment (Step-by-Step)
 ### Step 1: Setup MinIO (Object Storage)
