@@ -12,11 +12,9 @@ This project demonstrates a near-realtime data streaming architecture for tracki
 * **Monitoring:** Prometheus, Grafana
 
 ## 🌊 Data Flow
-Application → Postgres → Debezium → Kafka → Spark
-*→ MinIO (Data Lake)
-*→ Email Service (Alerts)
-*→ ClickHouse (Analytics)
-
+Application → Postgres → Debezium → Kafka → Spark → MinIO (Data Lake) → ClickHouse (Analytics)
+                                                  → Email Service (Alerts)
+Optimize (DeltaLake)
 ## ⚙️ Preparation
 ### 1. Folder Directory Setup
 Run the following command in your terminal at the project root directory to initialize data volumes for Docker. This ensures data persistence when containers are stopped or removed:
