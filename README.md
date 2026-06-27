@@ -14,6 +14,7 @@ This project demonstrates a near-realtime data streaming architecture for tracki
 ## 🌊 Data Flow
 Application → Postgres → Debezium → Kafka → Spark → MinIO (Data Lake) → ClickHouse (Analytics)
                                                   → Email Service (Alerts)
+
 Optimize (DeltaLake)
 ## ⚙️ Preparation
 ### 1. Folder Directory Setup
