@@ -155,7 +155,9 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin  # Đặt mật khẩu đăng nhập Grafana
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./data/grafana:/var/lib/grafana
     depends_on:
       - prometheus
 
