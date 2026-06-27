@@ -9,13 +9,12 @@ CREATE TABLE IF NOT EXISTS orders
     order_date DateTime('UTC'),
     customer_name String,
     product_name String,
-    price Float64,               
+    price Float64,              
     quantity Int32,
     status String
 )
-ENGINE = S3(
-    'http://minio:9000/lakehouse/orders/*.parquet', 
-    'minioadmin',           -- Access Key
-    'minioadminpassword',   -- Secret Key
-    'Parquet'               -- Định dạng file
+ENGINE = DeltaLake(
+    'http://minio:9000/lakehouse/orders/', 
+    'minioadmin', 
+    'minioadminpassword'
 );

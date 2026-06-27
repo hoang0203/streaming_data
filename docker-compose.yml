@@ -78,7 +78,6 @@ services:
     depends_on:
       - kafka
       - debezium
-    
     env_file:
       - .env
     environment:
@@ -159,3 +158,12 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin  # Đặt mật khẩu đăng nhập Grafana
     depends_on:
       - prometheus
+
+  spark-compaction:
+    build: ./compaction
+    container_name: spark_compaction_job
+    depends_on:
+      - minio
+    volumes:
+      # Map file python ra ngoài để bạn có thể sửa code mà không cần build lại image
+      - ./compaction/compact_parquet.py:/app/compact_parquet.py

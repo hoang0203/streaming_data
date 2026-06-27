@@ -71,8 +71,8 @@ CLICKHOUSE_DB=your_analytics_db_name         <-- ClickHouse database name
 #### 2.Open your browser and navigate to the MinIO Console at: http://localhost:9001
 
 #### 3.Log in using the credentials (default if not modified in .env):
-* **Username:** admin
-* **Password:** admin
+* **Username:** your_minio_user
+* **Password:** your_minio_password
 
 #### 4.Create a new bucket and name it exactly: lakehouse
 
